@@ -1,0 +1,40 @@
+.about {
+  padding: 60px 0;
+
+  &-content {
+
+    h5 {
+      margin-top: 20px;
+    }
+
+    ol {
+      margin-top: 20px;
+      list-style: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+
+      li {
+        padding-left: 30px;
+
+        &:first-child {
+          counter-reset: num;
+        }
+      }
+
+      ol {
+        margin-left: 30px;
+      }
+    }
+
+    ol li:before {
+      content: counters(num, '.') '. ';
+      counter-increment: num;
+      color: #3329A3;
+      font-weight: 600;
+      position: absolute;
+      left: 0;
+    }
+  }
+}

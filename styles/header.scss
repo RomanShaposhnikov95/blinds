@@ -1,0 +1,138 @@
+header {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  transition: all 0.3s;
+  box-shadow: 0 4px 2px -2px rgba(1,1,1,0.5);
+
+ .wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+   button {
+     border-radius: 5px;
+     padding: 0 4px;
+     background-color: #47A9EB;
+     color: #FFFFFF;
+     font-weight: 500;
+   }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  .list {
+    li {
+      a {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1300px) {
+  header {
+    ul {
+      column-gap: 20px;
+    }
+
+    .contacts {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+   .list {
+     position: fixed;
+     background-color: #FFFFFF;
+     flex-direction: column;
+     right: -100%;
+     width: 70%;
+     top: 0;
+     bottom: 0;
+     padding: 40px;
+     transition: all 0.3s;
+     row-gap: 20px;
+     z-index: 10;
+
+
+     .close {
+       position: absolute;
+       right: 0;
+       top: 0;
+
+       button {
+         width: 50px;
+         height: 50px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+       }
+     }
+
+   }
+
+   .contacts {
+      display: none;
+    }
+
+   .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1,1,1,0.7);
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    .open {
+      display: flex;
+      flex-direction: column;
+      row-gap: 7px;
+      span {
+        width: 30px;
+        height: 2px;
+        background-color: #0B5ED7;
+      }
+    }
+  }
+
+  header.show {
+    .list {
+      right: 0;
+    }
+
+    .overlay {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+
+  .mobile {
+    display: flex !important;
+  }
+}
+
