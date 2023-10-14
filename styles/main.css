@@ -153,6 +153,33 @@ input[type=checkbox] {
   margin-right: 10px;
 }
 
+ol {
+  margin-top: 20px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+ol li {
+  padding-left: 30px;
+}
+ol li:first-child {
+  counter-reset: num;
+}
+ol ol {
+  margin-left: 30px;
+}
+
+ol li:before {
+  content: counters(num, ".") ". ";
+  counter-increment: num;
+  color: #3329A3;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+}
+
 header {
   padding: 7px 20px;
   display: flex;
@@ -189,6 +216,10 @@ header .list li a {
 }
 header .mobile {
   display: none;
+}
+header .contacts_wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1300px) {
@@ -399,6 +430,10 @@ header .mobile {
   background-color: rgba(71, 169, 235, 0.2);
   padding: 60px;
 }
+.request h4 {
+  margin-bottom: 30px;
+  font-size: 19px;
+}
 .request form {
   display: flex;
   flex-direction: column;
@@ -428,31 +463,6 @@ header .mobile {
 }
 .about-content h5 {
   margin-top: 20px;
-}
-.about-content ol {
-  margin-top: 20px;
-  list-style: none;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 6px;
-}
-.about-content ol li {
-  padding-left: 30px;
-}
-.about-content ol li:first-child {
-  counter-reset: num;
-}
-.about-content ol ol {
-  margin-left: 30px;
-}
-.about-content ol li:before {
-  content: counters(num, ".") ". ";
-  counter-increment: num;
-  color: #3329A3;
-  font-weight: 600;
-  position: absolute;
-  left: 0;
 }
 
 .examples {
@@ -544,6 +554,13 @@ header .mobile {
     width: 100%;
   }
 }
+.modal-header p {
+  margin-top: 12px;
+  color: #47A9EB;
+}
+.modal-header p a {
+  text-decoration: underline;
+}
 .modal-body {
   display: flex;
   flex-direction: column;
@@ -556,10 +573,10 @@ footer {
 }
 footer .container {
   display: flex;
-  column-gap: 40px;
+  column-gap: 20px;
 }
 footer ul {
-  width: 20%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
@@ -584,6 +601,10 @@ footer ul li:first-child {
   font-weight: 600;
   line-height: normal;
   margin-bottom: 10px;
+  margin-top: 20px;
+}
+footer ul li .logo svg {
+  margin-right: 0;
 }
 footer ul .rights {
   display: flex;
@@ -592,13 +613,12 @@ footer ul .rights {
   align-items: flex-end;
 }
 footer ul:first-child {
-  width: 30%;
+  width: 40%;
 }
 
 @media (max-width: 991px) {
   footer .container {
     flex-wrap: wrap;
-    row-gap: 40px;
   }
   footer ul {
     width: calc(50% - 20px);
@@ -608,6 +628,9 @@ footer ul:first-child {
   }
 }
 @media (max-width: 591px) {
+  footer {
+    padding: 0 0 30px 0;
+  }
   footer .container {
     flex-direction: column-reverse;
   }
@@ -616,6 +639,9 @@ footer ul:first-child {
   }
   footer ul:first-child {
     width: 100%;
+  }
+  footer ul .rights {
+    margin-top: 15px;
   }
 }
 

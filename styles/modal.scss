@@ -1,5 +1,15 @@
 .modal {
 
+  &-header {
+    p {
+      margin-top: 12px;
+      color: #47A9EB;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &-body {
     display: flex;
     flex-direction: column;

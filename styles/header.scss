@@ -44,6 +44,13 @@ header {
   .mobile {
     display: none;
   }
+
+  .contacts {
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 
