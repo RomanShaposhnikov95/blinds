@@ -360,6 +360,7 @@ header .contacts_wrap {
   min-width: 55%;
   display: flex;
   justify-content: center;
+  align-items: center;
   row-gap: 6px;
   flex-wrap: wrap;
   column-gap: 6px;
@@ -369,9 +370,6 @@ header .contacts_wrap {
   max-height: 500px;
   border-radius: 12px;
   object-fit: cover;
-}
-.catalog-content-item-imgs img:nth-child(-n+2) {
-  width: calc(50% - 3px);
 }
 .catalog-content-item-data {
   display: flex;
@@ -397,7 +395,10 @@ header .contacts_wrap {
   flex-direction: column;
   row-gap: 6px;
 }
-.catalog-content-item-data-wrap:first-child {
+.catalog-content-item-data-wrap .catalog-content-item-data-price {
+  margin-top: 15px;
+}
+.catalog-content-item-data-wrap .first {
   margin-top: 0;
 }
 .catalog-content-item:nth-child(2n) {
