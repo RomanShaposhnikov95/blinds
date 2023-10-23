@@ -32,14 +32,6 @@
         }
       }
 
-      //&-imgs {
-      //  img {
-      //    &:nth-child(-n+2) {
-      //      width: calc(50% - 3px);
-      //    }
-      //  }
-      //}
-
       &-data {
         display: flex;
         flex-direction: column;
@@ -81,6 +73,9 @@
       &:nth-child(2n) {
         flex-direction: row;
       }
+    }
+    .group {
+      flex-direction: row-reverse;
     }
   }
 }
