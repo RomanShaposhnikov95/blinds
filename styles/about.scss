@@ -6,5 +6,19 @@
     h5 {
       margin-top: 20px;
     }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      li {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 12px;
+        }
+      }
+    }
   }
 }
