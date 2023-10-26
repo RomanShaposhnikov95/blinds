@@ -99,6 +99,10 @@
           }
         }
       }
+
+      .group {
+        flex-direction: column;
+      }
     }
   }
 }

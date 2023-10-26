@@ -285,6 +285,9 @@ header .contacts_wrap {
   header.show .list {
     right: 0;
   }
+  header.show .list li svg {
+    margin-right: 12px;
+  }
   header.show .overlay {
     pointer-events: all;
     opacity: 1;
@@ -418,6 +421,9 @@ header .contacts_wrap {
   }
   .catalog-content-item-imgs img:nth-child(-n+2) {
     width: 100%;
+  }
+  .catalog-content .group {
+    flex-direction: column;
   }
 }
 .tutorial {
@@ -556,6 +562,7 @@ header .contacts_wrap {
 }
 .review .swiper-button-prev, .review .swiper-button-next {
   margin: 20px;
+  top: 0;
 }
 .review .swiper-button-prev:after, .review .swiper-button-next:after {
   color: #47A9EB;
@@ -570,6 +577,7 @@ header .contacts_wrap {
   justify-content: center;
   border-radius: 50%;
   transition: all 0.3s;
+  outline: none;
 }
 .review .swiper-button-prev:hover:after, .review .swiper-button-next:hover:after {
   background-color: #0B5ED7;
@@ -590,6 +598,13 @@ header .contacts_wrap {
 }
 .modal-header p a {
   text-decoration: underline;
+}
+.modal-header .btn-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .modal-body {
   display: flex;

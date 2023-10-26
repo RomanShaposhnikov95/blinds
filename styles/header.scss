@@ -130,6 +130,12 @@ header {
   header.show {
     .list {
       right: 0;
+
+      li {
+        svg {
+          margin-right: 12px;
+        }
+      }
     }
 
     .overlay {
